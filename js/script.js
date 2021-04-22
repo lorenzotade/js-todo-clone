@@ -25,10 +25,11 @@ $(function(){
   // ricarico il document per essere in grado di leggere
   // gli elementi aggiunti dinamicamente dal ciclo for;
   // a questo punto al click sul fontawesome trash
-  // vado a puntare al genitore dello stesso (li) e lo
+  // vado a puntare al genitore dello stesso (li);
+  // sostituisco il testo in "Eliminato" e lo
   // rimuovo cancellando l'elemento desiderato dalla lista
   $(document).on('click', '.fa-trash-alt', function(){
-    $(this).parent().remove();
+    $(this).parent().html('<p class="text">Eliminato</p>').fadeOut(700);
   });
 
   // metto un event listener sul campo input. Al rilascio
